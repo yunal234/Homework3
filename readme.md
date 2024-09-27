@@ -1,12 +1,7 @@
-# Project Install Instructions
+# Homework 3
 
-## Install
+## Cloned previous respository
 
-1. clone
-2. pip install -r requirements.txt
+1. Removed old origin
+2. Added new origin
 
-## Testing
-
-1. pytest
-2. pytest --pylint
-3. pytest --pylint -- cov
