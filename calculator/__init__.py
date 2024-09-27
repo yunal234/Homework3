@@ -1,11 +1,31 @@
-def add(a,b):
-    return a + b
+from calculator.calculation import Calculation
+from calculator.operations import add, subtract, multiply, divide
 
-def subtract(a,b):
-    return a - b
+class Calculator:
+    '''Create the empty history list'''
+    def __init__(self):
+        self.history = []
 
-def multiply(a,b):
-    return a * b
+    @staticmethod
+    def add(a, b):
+        calculation = Calculation(a, b, add)
+        return calculation.get_result()
 
-def divide(a,b):
-    return a / b
+    @staticmethod
+    def subtract(a, b):
+        calculation = Calculation(a, b, subtract) 
+        return calculation.get_result()
+
+    @staticmethod
+    def multiply(a, b):
+        calculation = Calculation(a, b, multiply)
+        return calculation.get_result()
+
+    @staticmethod
+    def divide(a, b):
+        calculation = Calculation(a, b, divide)
+        return calculation.get_result()
+
+    def add_to_history(self, operation, a, b, result):
+        '''Store the result in history'''
+        self.history.append((operation.__name__, a, b, result))

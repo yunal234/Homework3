@@ -13,6 +13,6 @@ git clone git@github.com:yunal234/Homework3.git
 ```bash
 git remote remove origin
 ```
-
+* The first calculator was branched off using the format of previously written code. 
 
 
