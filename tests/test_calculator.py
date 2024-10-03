@@ -31,3 +31,10 @@ def test_divide_by_zero():
     calc = Calculator()
     with pytest.raises(ValueError, match="Invalid"):
         calc.divide(2, 0)
+
+def test_get_history():
+    '''Test retrieving the history of calculations.'''
+    calc = Calculator()
+    assert not calc.get_history()
+    calc.add_to_history(Calculator.add, 2, 2, 4)
+    assert calc.get_history() == [('add', 2, 2, 4)]
